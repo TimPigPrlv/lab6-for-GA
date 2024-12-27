@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MyDesktopApp.MainWindow"
+        Title="MyDesktopApp">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Name="AuthorText" FontSize="16" />
+        <Button Content="Show Author Info"
+                Width="200" Height="40"
+                Click="OnShowAuthorClick"/>
+        <Button Content="Guessing Game"
+            Width="200" Height="40"
+            Click="OnOpenGuessingGameClick"/>
+        <Button Content="Sorting"
+            Width="200" Height="40"
+            Click="OnOpenSortingClick"/>
+        <Button Content="Tetris"
+         Width="200" Height="40"
+          Click="OnOpenTetrisClick"/>
+        <Button Content="Close"
+                Width="200" Height="40"
+                Click="OnCloseClick"/>
+    </StackPanel>
+</Window>

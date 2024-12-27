@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MyDesktopApp.TetrisWindowAdapter"
+        Width="500" Height="700"
+        Title="Tetris Game"
+        Focusable="True" KeyDown="OnKeyDown"
+        >
+
+    <Grid Margin="10">
+        <StackPanel Spacing="10">
+            <!-- Game Field -->
+            <UniformGrid Name="GameFieldGrid" Rows="10" Columns="10" HorizontalAlignment="Center"/>
+
+            <!-- Score -->
+            <TextBlock Name="ScoreLabel" FontSize="16" Foreground="Green"/>
+
+            <!-- Controls -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                <Button Name="MoveLeftButton" Content="←" Width="80" Click="OnMoveClick" Tag="A"/>
+                <Button Name="MoveRightButton" Content="→" Width="80" Click="OnMoveClick" Tag="D"/>
+                <Button Name="MoveDownButton" Content="↓" Width="80" Click="OnMoveClick" Tag="S"/>
+                <Button Name="RotateButton" Content="⤿" Width="80" Click="OnMoveClick" Tag="W"/>
+            </StackPanel>
+
+            <!-- Close Button -->
+            <Button Content="Закрыть" Width="100" HorizontalAlignment="Center" Click="OnCloseClick"/>
+            <TextBlock Name="ResultLabel" FontSize="16" Foreground="Red"/>
+        </StackPanel>
+    </Grid>
+</Window>
